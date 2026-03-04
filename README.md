@@ -22,29 +22,21 @@ AI coding tools generate inaccessible code by default. They forget ARIA rules, s
 
 ## The Solution
 
-**Accessibility Agents** provides fifty-seven specialized agents across three teams and five platforms:
+**Accessibility Agents** provides fifty-seven specialized agents across five teams and five platforms:
 
-- **Accessibility team** — twenty-seven agents that enforce WCAG AA standards for web code, Office/PDF/ePub documents, and Markdown documentation
-- **GitHub Workflow team** — twelve agents that manage repositories, triage issues, review PRs, and keep your team informed
-- **Developer Tools team** — seven agents for Python, wxPython, NVDA addon development, desktop accessibility, and accessibility tool building
+- **Web Accessibility team** - seventeen agents that enforce WCAG AA standards for web code
+- **Document Accessibility team** - agents for Office (DOCX, XLSX, PPTX), PDF, EPUB, and Markdown accessibility scanning
+- **GitHub Workflow team** - eleven agents that manage repositories, triage issues, review PRs, and keep your team informed
+- **Developer Tools team** - seven agents for Python, wxPython, desktop accessibility, NVDA addon development, and accessibility tool building
+- **Cross-cutting** - orchestrators and coordinators that route work across teams
 
 All agents run on:
 
-- **Claude Code** - Agents with hook-based enforcement that blocks UI file edits until accessibility review is complete
+- **Claude Code** - Agents you invoke directly for accessibility evaluation
 - **GitHub Copilot** (VS Code and CLI) - Agents + workspace instructions that ensure accessibility guidance in every conversation
 - **Gemini CLI** - Skills-based extension with always-on WCAG AA context via GEMINI.md
 - **Claude Desktop** - An MCP extension (.mcpb) with tools and prompts for accessibility review
 - **Codex CLI** - Condensed WCAG AA rules loaded via `.codex/AGENTS.md` -- accessibility enforced automatically on every UI task
-
-### Hook-Based Enforcement (Claude Code)
-
-In Claude Code, accessibility review is not optional. A three-hook enforcement gate makes it impossible to skip:
-
-1. **Proactive detection** — Automatically detects web projects (React, Next.js, Vue, Svelte, etc.) and injects the delegation instruction on every prompt. No keywords required.
-2. **Edit gate** — Hard blocks any Edit/Write to UI files (`.jsx`, `.tsx`, `.vue`, `.css`, `.html`, etc.) until the accessibility-lead has been consulted. The tool call is denied at the system level.
-3. **Session marker** — When accessibility-lead completes, a session marker unlocks the edit gate for the rest of the session.
-
-This exists because text instructions do not work. LLMs read "MANDATORY" and "NON-OPTIONAL" and still skip the step. The hook gate removes the option to skip. See the [Hooks Guide](docs/hooks-guide.md) for the full technical breakdown.
 
 ## Quick Start
 
@@ -111,8 +103,7 @@ The following agents make up the accessibility enforcement team, each owning one
 | **alt-text-headings** | Alt text, SVGs, icons, heading hierarchy, landmarks, page titles. |
 | **tables-data-specialist** | Table markup, scope, caption, headers, sortable columns, ARIA grids. |
 | **link-checker** | Ambiguous link text, "click here" detection, missing new-tab warnings. |
-| **text-quality-reviewer** | Non-visual text quality: template variables, code syntax, placeholders, and typos in alt text and ARIA labels. |
-| **accessibility-wizard** | Interactive guided web audit across all twelve accessibility domains. |
+| **accessibility-wizard** | Interactive guided web audit across all eleven accessibility domains. |
 | **testing-coach** | Screen reader testing, keyboard testing, automated testing guidance. |
 | **wcag-guide** | WCAG 2.2 criteria in plain language, conformance levels, what changed. |
 | **word-accessibility** | Microsoft Word (DOCX) document accessibility scanning. |
@@ -122,12 +113,22 @@ The following agents make up the accessibility enforcement team, each owning one
 | **pdf-accessibility** | PDF conformance per PDF/UA and the Matterhorn Protocol. |
 | **pdf-scan-config** | PDF scan rule configuration and preset profiles. |
 | **document-accessibility-wizard** | Guided document audit with cross-document analysis, VPAT export, and CSV export with help links. |
-| **cognitive-accessibility** | WCAG 2.2 cognitive SC, COGA guidance, plain language analysis. |
-| **mobile-accessibility** | React Native, Expo, iOS, Android touch targets and screen readers. |
-| **design-system-auditor** | Color token contrast, focus ring tokens, spacing tokens, Tailwind/MUI/Chakra/shadcn. |
 | **markdown-a11y-assistant** | Markdown documentation audit — links, alt text, headings, tables, emoji, diagrams, em-dashes, anchors. |
-| **epub-accessibility** | ePub document accessibility scanning per EPUB Accessibility 1.1. |
-| **epub-scan-config** | ePub scan rule configuration and preset profiles. |
+| **text-quality-reviewer** | Catches invisible text quality issues: template variables in alt text, code syntax as accessible names, empty labels, duplicate control labels. |
+
+### Developer Tools Agents
+
+The following agents support Python, wxPython, desktop accessibility, NVDA addon development, and accessibility tool building.
+
+| Agent | Role |
+|-------|------|
+| **developer-hub** | Orchestrator. Routes development tasks to the right specialist from plain English. |
+| **python-specialist** | Python debugging, packaging (PyInstaller/Nuitka/cx_Freeze), testing, type checking, async, optimization. |
+| **wxpython-specialist** | wxPython GUI — sizer layouts, event handling, AUI, custom controls, threading, desktop accessibility. |
+| **desktop-a11y-specialist** | Platform accessibility APIs (UI Automation, MSAA, ATK, NSAccessibility), screen reader Name/Role/Value/State, focus management. |
+| **desktop-a11y-testing-coach** | Screen reader testing with NVDA, JAWS, Narrator, VoiceOver, Orca. Automated UIA testing, keyboard-only testing flows. |
+| **a11y-tool-builder** | Build accessibility scanning tools, rule engines, document parsers, report generators, and audit automation. |
+| **nvda-addon-specialist** | NVDA screen reader addon development — globalPlugins, appModules, synthDrivers, braille tables, Add-on Store submission, grounded in official NVDA source. |
 
 ### GitHub Workflow Agents
 
@@ -146,21 +147,6 @@ The following agents handle GitHub repository management, triage, and workflow a
 | **contributions-hub** | Discussions, community health metrics, first-time contributor insights. |
 | **template-builder** | Guided wizard for issue/PR/discussion templates - no YAML knowledge required. |
 | **repo-manager** | Repository scaffolding - labels, CI, CONTRIBUTING, SECURITY, issue templates. |
-| **nexus** | Intelligent command center — discovers repos and orgs, routes tasks in plain English. |
-
-### Developer Tools Agents
-
-The following agents handle Python development, desktop application accessibility, and accessibility tool building.
-
-| Agent | Role |
-|-------|------|
-| **developer-hub** | Orchestrator. Routes developer tasks to the right specialist. |
-| **python-specialist** | Python debugging, packaging (PyInstaller/Nuitka/cx_Freeze), testing, async patterns. |
-| **wxpython-specialist** | wxPython UI framework — sizers, events, AUI, threading, desktop accessibility. |
-| **desktop-a11y-specialist** | Platform accessibility APIs (UIA, MSAA, ATK, NSAccessibility), screen reader compatibility. |
-| **desktop-a11y-testing-coach** | Desktop accessibility testing with NVDA, JAWS, Narrator, VoiceOver, Orca. |
-| **a11y-tool-builder** | Building accessibility scanning tools, rule engines, report generators, and audit automation. |
-| **nvda-addon-specialist** | NVDA addon development: globalPlugins, appModules, synthDrivers, manifest, Add-on Store submission. |
 
 See the [Agent Reference Guide](docs/agents/README.md) for deep dives on every agent, example prompts, behavioral constraints, and instructor-led walkthroughs.
 
@@ -173,7 +159,7 @@ The following guides cover web and document accessibility features.
 | Guide | What It Covers |
 |-------|---------------|
 | [Getting Started](docs/getting-started.md) | Installation for Claude Code, Copilot (VS Code and CLI), Gemini CLI, Claude Desktop, and Codex CLI |
-| [Agent Reference](docs/agents/README.md) | All agents with invocation syntax, examples, and deep dives |
+| [Agent Reference](docs/agents/README.md) | All 57 agents with invocation syntax, examples, and deep dives |
 | [MCP Tools](docs/tools/mcp-tools.md) | Static analysis tools: heading structure, link text, form labels |
 | [axe-core Integration](docs/tools/axe-core-integration.md) | Runtime scanning, agent workflow, CI/CD setup |
 | [VPAT Generation](docs/tools/vpat-generation.md) | VPAT 2.5 / ACR compliance report generation |
@@ -183,8 +169,7 @@ The following guides cover web and document accessibility features.
 | [Custom Prompts](docs/scanning/custom-prompts.md) | Nine pre-built prompts for one-click document workflows |
 | [Markdown Accessibility](docs/prompts/README.md#markdown-accessibility-prompts) | Four prompts for markdown auditing, quick checks, fix mode, and audit comparison |
 | [Configuration](docs/configuration.md) | Character budget, troubleshooting |
-| [Hooks Guide](docs/hooks-guide.md) | Hook-based enforcement system, proactive detection, edit gate, session markers |
-| [Architecture](docs/architecture.md) | Project structure, why agents over skills/MCP, why hooks over instructions |
+| [Architecture](docs/architecture.md) | Project structure, why agents over skills/MCP, design philosophy |
 
 ### GitHub Workflow Docs
 
@@ -192,7 +177,7 @@ The following guide covers all GitHub workflow agents and their invocation synta
 
 | Guide | What It Covers |
 |-------|---------------|
-| [GitHub Workflow Agents](docs/agents/README.md#github-workflow-agents) | All 12 workflow agents with invocation syntax, examples, and instructor-led walkthroughs |
+| [GitHub Workflow Agents](docs/agents/README.md#github-workflow-agents) | All 10 workflow agents with invocation syntax, examples, and instructor-led walkthroughs |
 
 ### Advanced Guides
 
@@ -205,17 +190,6 @@ The following guides cover advanced configuration, cross-platform handoff, and d
 | [Plugin Packaging](docs/advanced/plugin-packaging.md) | Packaging and distributing agents for different environments |
 | [Platform References](docs/advanced/platform-references.md) | External documentation sources with feature-to-source mapping |
 | [Research Sources](docs/RESEARCH-SOURCES.md) | Authoritative sources (W3C APG, WebAIM, WCAG 2.2, Deque) that informed every agent rule |
-
-### Source Citation Policy
-
-Every agent is required to cite authoritative sources for factual claims and recommendations. This addresses the core trust problem with AI-generated guidance: without verifiable sources, agent output is indistinguishable from hallucination.
-
-| Resource | Purpose |
-|----------|---------|
-| [Citation Policy](.github/agents/CITATION_POLICY.md) | Full policy with 6-tier authority hierarchy, citation format, and per-agent source registry |
-| [Source Registry](.github/agents/SOURCE_REGISTRY.json) | Machine-readable fingerprints for 20 authoritative URLs |
-| [Currency Workflow](.github/workflows/source-currency-check.yml) | Weekly GitHub Actions check that opens issues when sources change or break |
-| [Shared Instructions](.github/agents/shared-instructions.md#source-citation-policy) | Behavioral rule inherited by all 57 agents |
 
 ## What This Covers
 
@@ -236,6 +210,20 @@ Every agent is required to cite authoritative sources for factual claims and rec
 - SARIF 2.1.0 output for CI/CD integration
 - CSV export with help documentation links for web and document audit findings
 - Common framework pitfalls (React conditional rendering, Tailwind contrast failures)
+- NVDA screen reader addon development (globalPlugins, appModules, synthDrivers, braille tables, Add-on Store submission)
+- Desktop application accessibility (UI Automation, MSAA/IAccessible2, ATK/AT-SPI, NSAccessibility)
+
+## Source Citation Policy
+
+Every agent follows a formal source citation policy. AI giving accessibility advice must be held to a higher standard -- wrong guidance creates real barriers for real people.
+
+- **No source, no claim.** If an agent cannot cite an authoritative source, it explicitly flags the recommendation as experience-based.
+- **Inline citations.** Every factual claim includes a link to the source.
+- **Six-tier authority hierarchy.** Normative specs (WCAG, ARIA) > Informative guidance > Platform vendor docs > AT vendor docs > Peer-reviewed experts > Government/legal.
+- **Machine-readable source registry.** `SOURCE_REGISTRY.json` maps every agent domain to its designated primary authorities.
+- **Automated freshness checks.** A weekly GitHub Actions workflow verifies source URLs are still live and opens issues when documentation drifts.
+
+See [CITATION_POLICY.md](.github/agents/CITATION_POLICY.md) for the full policy.
 
 ## Roadmap
 
@@ -243,6 +231,7 @@ See [ROADMAP.md](ROADMAP.md) for what is planned, in progress, and shipped. Trac
 
 ## What This Does Not Cover
 
+- Mobile native accessibility (iOS/Android). A separate agent team for that is [planned](https://github.com/Community-Access/accessibility-agents/issues/8).
 - WCAG AAA compliance (agents target AA as the standard). An AAA agent is [planned](https://github.com/Community-Access/accessibility-agents/issues/12).
 
 ## Example Project
@@ -251,7 +240,9 @@ The `example/` directory contains a deliberately broken web page with 20+ intent
 
 ## Contributing
 
-This project thrives on community participation. Whether you are a developer, accessibility specialist, screen reader user, or just someone who cares about inclusive software - there is a place for you here.
+This project exists because the community shows up. Every feature in v2.5 -- the NVDA Addon Specialist, the Text Quality Reviewer, the source citation policy, the wxPython screen reader documentation -- started as a community conversation. Not a roadmap item. A real person saying "this is what I need."
+
+Whether you are a developer, accessibility specialist, screen reader user, or just someone who cares about inclusive software - there is a place for you here.
 
 - **Found an agent gap?** [Open an issue](https://github.com/Community-Access/accessibility-agents/issues/new?template=agent_gap.yml) describing what the agent missed or got wrong.
 - **Know a pattern we should catch?** Open a PR. Agent files are plain Markdown - no special tooling required.
