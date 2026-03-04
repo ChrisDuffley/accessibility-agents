@@ -22,11 +22,11 @@ AI coding tools generate inaccessible code by default. They forget ARIA rules, s
 
 ## The Solution
 
-**Accessibility Agents** provides fifty-six specialized agents across three teams and five platforms:
+**Accessibility Agents** provides fifty-seven specialized agents across three teams and five platforms:
 
 - **Accessibility team** — twenty-seven agents that enforce WCAG AA standards for web code, Office/PDF/ePub documents, and Markdown documentation
 - **GitHub Workflow team** — twelve agents that manage repositories, triage issues, review PRs, and keep your team informed
-- **Developer Tools team** — six agents for Python, wxPython, desktop accessibility, and accessibility tool building
+- **Developer Tools team** — seven agents for Python, wxPython, NVDA addon development, desktop accessibility, and accessibility tool building
 
 All agents run on:
 
@@ -160,6 +160,7 @@ The following agents handle Python development, desktop application accessibilit
 | **desktop-a11y-specialist** | Platform accessibility APIs (UIA, MSAA, ATK, NSAccessibility), screen reader compatibility. |
 | **desktop-a11y-testing-coach** | Desktop accessibility testing with NVDA, JAWS, Narrator, VoiceOver, Orca. |
 | **a11y-tool-builder** | Building accessibility scanning tools, rule engines, report generators, and audit automation. |
+| **nvda-addon-specialist** | NVDA addon development: globalPlugins, appModules, synthDrivers, manifest, Add-on Store submission. |
 
 See the [Agent Reference Guide](docs/agents/README.md) for deep dives on every agent, example prompts, behavioral constraints, and instructor-led walkthroughs.
 
