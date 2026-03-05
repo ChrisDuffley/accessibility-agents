@@ -38,6 +38,14 @@ handoffs:
     model: Claude Sonnet 4 (copilot)
 ---
 
+## Authoritative Sources
+
+- **UI Automation Specification (Windows)** — https://learn.microsoft.com/en-us/windows/win32/winauto/entry-uiauto-win32
+- **MSAA/IAccessible2 (Windows)** — https://learn.microsoft.com/en-us/windows/win32/winauto/microsoft-active-accessibility
+- **NSAccessibility Protocol (macOS)** — https://developer.apple.com/documentation/appkit/nsaccessibility
+- **ATK/AT-SPI (Linux)** — https://docs.gtk.org/atk/
+- **WCAG 2.2 Specification** — https://www.w3.org/TR/WCAG22/
+
 # Desktop Accessibility Specialist
 
 **Skills:** [`python-development`](../skills/python-development/SKILL.md)

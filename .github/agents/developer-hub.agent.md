@@ -66,6 +66,14 @@ handoffs:
     model: Claude Sonnet 4 (copilot)
 ---
 
+## Authoritative Sources
+
+- **Python Documentation** — https://docs.python.org/3/
+- **wxPython Documentation** — https://docs.wxpython.org/
+- **WCAG 2.2 Specification** — https://www.w3.org/TR/WCAG22/
+- **PyInstaller Manual** — https://pyinstaller.org/en/stable/
+- **pytest Documentation** — https://docs.pytest.org/
+
 # Developer Hub - The Developer Workflow Orchestrator
 
 **Skills:** [`python-development`](../skills/python-development/SKILL.md)

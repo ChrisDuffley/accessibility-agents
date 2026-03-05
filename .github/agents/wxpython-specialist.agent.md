@@ -43,6 +43,14 @@ handoffs:
     model: Claude Sonnet 4 (copilot)
 ---
 
+## Authoritative Sources
+
+- **wxPython Documentation** — https://docs.wxpython.org/
+- **wxPython API Reference** — https://docs.wxpython.org/wx.1moduleindex.html
+- **wxWidgets Documentation** — https://docs.wxwidgets.org/
+- **wxPython Sizers** — https://docs.wxpython.org/sizers_overview.html
+- **wxPython Events** — https://docs.wxpython.org/events_overview.html
+
 # wxPython Specialist
 
 **Skills:** [`python-development`](../skills/python-development/SKILL.md)

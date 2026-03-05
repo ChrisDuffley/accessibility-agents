@@ -38,6 +38,14 @@ handoffs:
     model: Claude Sonnet 4 (copilot)
 ---
 
+## Authoritative Sources
+
+- **WCAG 2.2 Specification** — https://www.w3.org/TR/WCAG22/
+- **axe-core Rules** — https://github.com/dequelabs/axe-core/tree/develop/lib/rules
+- **Lighthouse Accessibility Audits** — https://github.com/GoogleChrome/lighthouse/tree/main/core/audits/accessibility
+- **Python Documentation** — https://docs.python.org/3/
+- **pytest Documentation** — https://docs.pytest.org/
+
 # Accessibility Tool Builder
 
 **Skills:** [`python-development`](../skills/python-development/SKILL.md)
