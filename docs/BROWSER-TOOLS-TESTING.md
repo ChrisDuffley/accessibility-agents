@@ -584,7 +584,7 @@ Expected: Browser tools work with vanilla HTML ✓
 5. **Check report embedding:**
    - Open `WEB-ACCESSIBILITY-AUDIT.md`
    - Verify: Screenshots are embedded with alt text ✓
-   - Verify: Screenshot links work: `[Screenshot](./a11y-screenshots/2026-03-05-14-30-fix1-hero.png)` ✓
+   - Verify: Screenshot path format is valid: `.a11y-screenshots/2026-03-05-14-30-fix1-hero.png` ✓
    - Verify: Before/after comparison is clear ✓
 
 6. **Test JPEG artifacts:**

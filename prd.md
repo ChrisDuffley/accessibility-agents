@@ -546,7 +546,7 @@ All agents must follow a 6-tier authority hierarchy when citing sources:
 **Five Core Rules:**
 
 1. **No Source, No Claim** - Every factual statement must include an inline source link
-2. **Inline Citation Format** - `[text](URL)` immediately after the claim
+2. **Inline Citation Format** - `[text](https://example.com/source)` immediately after the claim
 3. **Sources Section** - Every agent response includes an Authoritative Sources section at the end
 4. **Recency Preference** - Prefer the most recent version of any specification
 5. **Conflict Resolution** - Higher-tier sources override lower-tier sources

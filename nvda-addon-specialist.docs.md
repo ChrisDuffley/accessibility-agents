@@ -53,12 +53,12 @@ Returns a structured report with NVDA source file references, expected behavior,
 
 | Skill | Purpose |
 |-------|---------|
-| [python-development](../skills/python-development.md) | Python packaging, testing, pyproject.toml patterns |
+| [python-development](docs/skills/python-development.md) | Python packaging, testing, pyproject.toml patterns |
 
 ## Related Agents
 
-- [wxpython-specialist](wxpython-specialist.md) -- routes here for addon GUI components (settings panels, dialogs)
-- [desktop-a11y-specialist](desktop-a11y-specialist.md) -- routes here for platform API understanding (how NVDA interacts with UIA/MSAA)
-- [desktop-a11y-testing-coach](desktop-a11y-testing-coach.md) -- bidirectional: build then test with NVDA
-- [a11y-tool-builder](a11y-tool-builder.md) -- routes here for building scanning tools into addons
-- [developer-hub](developer-hub.md) -- routes here for NVDA addon development tasks
+- [wxpython-specialist](docs/agents/wxpython-specialist.md) -- routes here for addon GUI components (settings panels, dialogs)
+- [desktop-a11y-specialist](docs/agents/desktop-a11y-specialist.md) -- routes here for platform API understanding (how NVDA interacts with UIA/MSAA)
+- [desktop-a11y-testing-coach](docs/agents/desktop-a11y-testing-coach.md) -- bidirectional: build then test with NVDA
+- [a11y-tool-builder](docs/agents/a11y-tool-builder.md) -- routes here for building scanning tools into addons
+- [developer-hub](docs/agents/developer-hub.md) -- routes here for NVDA addon development tasks

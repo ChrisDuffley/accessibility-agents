@@ -153,7 +153,7 @@ If upgrading from an older version:
 
 ## See Also
 
-- [Related Skill Name](../related-skill/SKILL.md)
+- `../related-skill/SKILL.md`
 - [WCAG Criterion 1.2.3](https://www.w3.org/WAI/WCAG22/Understanding/...)
 - [External Reference](https://example.com)
 ```
@@ -228,7 +228,7 @@ Update agent files to reference your skill. In an agent's Behavioral Rules secti
 ## Custom Domain Guidance
 
 For [domain-specific] issues, reference the custom skill:
-[Custom Domain Skill Name](../path/to/skill/SKILL.md)
+`../path/to/skill/SKILL.md`
 
 This skill provides:
 - Rule definitions for [use case 1]

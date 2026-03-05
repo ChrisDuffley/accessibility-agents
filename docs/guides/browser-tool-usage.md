@@ -229,6 +229,8 @@ Store screenshots in workspace:
 - Naming: `{timestamp}-{fix-number}-{element-selector}.png`
 - Include in audit reports as image embeds
 
+Example screenshot path: `.a11y-screenshots/2026-03-01-fix3-submit-button.png`
+
 ## Troubleshooting
 
 ### "Browser tools not detected"
