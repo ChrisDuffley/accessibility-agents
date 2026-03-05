@@ -1227,9 +1227,9 @@ Single configuration file: `.codex/AGENTS.md`
 | `update.sh` | macOS/Linux updater |
 | `update.ps1` | Windows updater |
 
-### Prompts Files (60 prompt files in `.github/prompts/`)
+### Prompts Files (104 prompt files in `.github/prompts/`)
 
-All 60 prompts listed in the Custom Prompts section above, stored as `.github/prompts/{name}.prompt.md`.
+All 104 prompts listed in the Custom Prompts section above, stored as `.github/prompts/{name}.prompt.md`.
 
 ### Skills Files (17 skill folders in `.github/skills/`)
 

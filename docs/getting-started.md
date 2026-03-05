@@ -2,6 +2,19 @@
 
 This guide covers installation and setup for all supported platforms: Claude Code, GitHub Copilot (VS Code and CLI), Gemini CLI, Claude Desktop, and Codex CLI.
 
+## Source Attribution
+
+This guide is maintained against official platform documentation and release notes.
+
+Key sources:
+- VS Code updates: `https://code.visualstudio.com/updates`
+- VS Code Copilot customization: `https://code.visualstudio.com/docs/copilot/customization/custom-instructions`
+- VS Code custom agents: `https://code.visualstudio.com/docs/copilot/customization/custom-agents`
+- VS Code prompt files: `https://code.visualstudio.com/docs/copilot/customization/prompt-files`
+- GitHub Copilot docs: `https://docs.github.com/copilot`
+
+When a setting or feature changes upstream, this guide should be updated with the corresponding source link.
+
 ---
 
 ## Claude Code Setup

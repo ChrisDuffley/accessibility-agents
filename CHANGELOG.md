@@ -50,7 +50,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 #### Phase 1C: Agent Plugins & Plugin Packaging (3h) - Completed March 21, 2026
 
 - **Marketplace Plugin Packaging** - Created `plugin.yaml` manifest for VS Code Marketplace (awesome-copilot registry)
-  - Bundled 57 agents, 17 skills, 60+ prompts, 5 workspace instructions for one-click discovery
+  - Bundled 57 agents, 17 skills, 104 prompts, 5 workspace instructions for one-click discovery
   - All agent files include YAML frontmatter with tools, model preferences, handoffs
   - Marketplace installation guide added to README
   - Ready for immediate submission to awesome-copilot and copilot-plugins registries
@@ -92,7 +92,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Session End: Clean up markers for next session (both `Stop` and `SessionEnd` events)
 
 - **Hook Documentation**
-  - `docs/guides/hooks-guide.md` - Complete hooks guide with configuration, customization, security
+  - `docs/hooks-guide.md` - Complete hooks guide with configuration, customization, security
   - `docs/guides/hooks-troubleshooting.md` - 10 common issues with solutions
   - `docs/HOOKS-CROSS-PLATFORM-STRATEGY.md` - 56-page implementation strategy (Phase 4 planning document)
 

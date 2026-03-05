@@ -124,6 +124,22 @@ npm list -g --depth=0            # Global npm packages
 
 Accessibility Agents are tested against the **latest stable releases** of all supported platforms. While older versions may work, we cannot guarantee compatibility or support issues arising from outdated tooling. If you encounter unexpected behavior, update all tools before reporting issues.
 
+### Authoritative Sources and Currency
+
+This project bases platform-specific guidance on official vendor documentation and release notes, not secondary summaries.
+
+Primary references:
+- VS Code release notes: `https://code.visualstudio.com/updates`
+- VS Code Copilot customization docs: `https://code.visualstudio.com/docs/copilot/customization/custom-instructions`
+- VS Code custom agents docs: `https://code.visualstudio.com/docs/copilot/customization/custom-agents`
+- VS Code prompt files docs: `https://code.visualstudio.com/docs/copilot/customization/prompt-files`
+- GitHub Copilot product docs: `https://docs.github.com/copilot`
+
+Attribution policy:
+- Platform claims in this repo should cite at least one official source link.
+- New behavior tied to a specific release should include the release note URL.
+- When settings keys are documented, link to the official settings/docs page where possible.
+
 ## Optional Customization
 
 ### Custom Thinking Phrases (VS Code 1.110+)
@@ -273,13 +289,13 @@ To reinstall a specific agent from scratch, delete it first and rerun the instal
 
 1. **Open Extensions** - Press `Ctrl+Shift+X` (Windows/Linux) or `Cmd+Shift+X` (Mac)
 2. **Search** - Type "accessibility-agents"
-3. **Click Install** - One-click install of all 56 agents, 17 skills, 60+ prompts, and workspace instructions
+3. **Click Install** - One-click install of all 57 agents, 17 skills, 104 prompts, and workspace instructions
 4. **Configure** - Create scan config files for your project (instructions included in README)
 
 **What you get:**
-- ✅ 56 fully-integrated agents in GitHub Copilot (VS Code and CLI)
+- ✅ 57 fully-integrated agents in GitHub Copilot (VS Code and CLI)
 - ✅ 17 reusable accessibility skills (WCAG rules, severity scoring, scanning patterns)
-- ✅ 60+ custom prompts for web audits, document audits, GitHub workflows
+- ✅ 104 custom prompts for web audits, document audits, GitHub workflows, and developer tooling
 - ✅ 5 workspace instructions (automatic WCAG AA enforcement on every chat)
 - ✅ 100% source citation coverage (all agents cite authoritative standards)
 - ✅ Auto-update mechanism (new agents and features arrive automatically)

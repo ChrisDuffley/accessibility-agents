@@ -2,6 +2,15 @@
 
 > **New in VS Code 1.110:** The Agent Debug panel provides real-time visibility into chat sessions, showing which customizations are loaded, tool calls, system prompts, and more.
 
+## Authoritative References
+
+This guide tracks behavior documented in official VS Code/Copilot sources.
+
+References:
+- VS Code release notes: `https://code.visualstudio.com/updates`
+- VS Code Copilot customization docs: `https://code.visualstudio.com/docs/copilot/customization`
+- GitHub Copilot docs: `https://docs.github.com/copilot`
+
 ## What is the Agent Debug Panel?
 
 The Agent Debug panel gives you deeper insight into how Accessibility Agents work within VS Code. It replaces the old Diagnostics action with a richer, more detailed view that helps you understand and troubleshoot your agent configuration.

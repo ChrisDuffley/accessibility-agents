@@ -19,7 +19,7 @@
 
 ### Problem Statement
 
-Users have reported that agent outputs feel "AI-generated and therefore not trusted." There is no mechanism to verify whether a recommendation comes from an actual standard, specification, or official documentation. This undermines the credibility of all 56 agents in the accessibility-agents ecosystem.
+Users have reported that agent outputs feel "AI-generated and therefore not trusted." There is no mechanism to verify whether a recommendation comes from an actual standard, specification, or official documentation. This undermines the credibility of all 57 agents in the accessibility-agents ecosystem.
 
 ### Solution Architecture
 
@@ -101,7 +101,7 @@ Pair it with `aria-atomic="true"` when the entire region should be re-announced
 6. Update `README.md` -- add "Source Citation Policy" section
 7. Update `.github/agents/AGENTS.md` -- note policy as cross-cutting standard
 
-**Scale:** Approximately 56 agents across 3 platforms = ~170 file updates + shared policy file + docs.
+**Scale:** Approximately 57 agents across 3 platforms = ~170 file updates + shared policy file + docs.
 
 ---
 

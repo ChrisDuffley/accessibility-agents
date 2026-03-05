@@ -39,11 +39,11 @@ engines:
 
 # Plugin contents bundled for discovery and installation
 contents:
-  # Primary agent directory (56 agents for VS Code/Copilot)
+  # Primary agent directory (57 agents for VS Code/Copilot)
   agents:
     path: ".github/agents"
     description: "Orchestrator agents (accessibility-lead, web-accessibility-wizard, etc.) and specialist agents for WCAG A11y auditing across web, document, desktop, and developer accessibility domains"
-    count: 56
+    count: 57
     format: "agent.md"
     
   # Reusable multi-platform skills (17 skills)
@@ -54,11 +54,11 @@ contents:
     format: "SKILL.md"
     portable: true
 
-  # Custom prompts and slash commands (60+)
+  # Custom prompts and slash commands (104)
   prompts:
     path: ".github/prompts"
     description: "Task-oriented prompts for web audits, document audits, markdown audits, GitHub workflow automation, and remediation"
-    count: 60
+    count: 104
     format: "markdown"
 
   # Workspace instructions and rules
@@ -100,18 +100,18 @@ features:
   customSkills: true
   agentDebugPanel: true
   agenticBrowserTools: true
-  lifecycleHooks: false
+  lifecycleHooks: true
 
 # Platform support matrix
 platforms:
   - name: "GitHub Copilot (VS Code)"
-    agents: 56
+    agents: 57
     skills: 17
-    prompts: 60
+    prompts: 104
     status: "fully-supported"
     
   - name: "Copilot CLI"
-    agents: 56
+    agents: 57
     skills: 17
     status: "fully-supported"
 

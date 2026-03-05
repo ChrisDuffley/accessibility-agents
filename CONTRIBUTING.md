@@ -69,6 +69,34 @@ npm list -g --depth=0  # Global npm packages
 
 If you encounter unexpected behavior, update all tools first. Include your tool versions in PR descriptions when reporting issues.
 
+## Source Verification Checklist
+
+When your PR updates platform behavior, settings, release notes, or integration guidance, include source verification so docs remain current and authoritative.
+
+Before submitting, confirm:
+
+- You linked at least one official source for each platform-specific claim.
+- Settings keys are validated against current vendor docs.
+- Release-specific statements include the release notes link.
+- New prompts/agents/skills counts match repository inventory.
+- If guidance changed due to a platform update, note what changed in the PR description.
+
+Preferred primary sources:
+
+- VS Code updates: `https://code.visualstudio.com/updates`
+- VS Code Copilot customization: `https://code.visualstudio.com/docs/copilot/customization`
+- GitHub Copilot docs: `https://docs.github.com/copilot`
+- W3C WCAG 2.2: `https://www.w3.org/TR/WCAG22/`
+
+Suggested PR note template:
+
+```text
+Source verification:
+- Claim: <what changed>
+	Source: <official URL>
+	Verified on: <YYYY-MM-DD>
+```
+
 ## Guidelines
 
 - **Keep agent instructions focused.** Each agent owns one domain. Do not add ARIA rules to the contrast agent or focus management to the forms agent.

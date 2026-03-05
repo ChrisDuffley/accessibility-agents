@@ -21,10 +21,16 @@ def main():
     
     hook_event = input_data.get("hookEventName", "PostToolUse")
     agent_name = input_data.get("agent_name", "")
-    tool_name = input_data.get("tool_name", "")
+    subagent_type = input_data.get("subagent_type", "")
+    target_agent = input_data.get("target_agent", "")
     
-    # Check if accessibility-lead just completed a task
-    if "accessibility-lead" in agent_name.lower() or "accessibility" in tool_name.lower():
+    # Only unlock after explicit accessibility-lead completion to avoid false positives.
+    normalized = {
+        str(agent_name).lower(),
+        str(subagent_type).lower(),
+        str(target_agent).lower(),
+    }
+    if "accessibility-lead" in normalized:
         marker_path = Path(".github/.a11y-reviewed")
         marker_path.parent.mkdir(parents=True, exist_ok=True)
         marker_path.touch()

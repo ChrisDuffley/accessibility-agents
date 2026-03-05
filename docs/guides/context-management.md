@@ -1,5 +1,13 @@
 # Context Management for Long Accessibility Audits
 
+## Authoritative References
+
+This guide reflects VS Code/Copilot chat session behavior documented in official sources.
+
+References:
+- VS Code updates and release notes: `https://code.visualstudio.com/updates`
+- Copilot customization and chat docs: `https://code.visualstudio.com/docs/copilot/customization`
+
 When running comprehensive accessibility audits, conversations can accumulate context quickly. VS Code's `/compact` command helps manage this.
 
 ## When to Use `/compact`
